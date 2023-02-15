@@ -1,1 +1,2 @@
-﻿Console.WriteLine("Hello, Anka Anka again!");
+﻿// See https://aka.ms/new-console-template for more information
+Console.WriteLine("Hello, Hello!");
