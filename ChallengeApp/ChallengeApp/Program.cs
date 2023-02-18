@@ -1,58 +1,45 @@
-﻿string name = "Ewa";
-int age = 33;
-char plec = 'K';
+﻿// lista, tablica, for, foreach
+int[] grades = new int[365];
+string[] dayOfWeek = new string[7];
+dayOfWeek[0] = "Monday";
+dayOfWeek[1] = "Tuesday";
+dayOfWeek[2] = "Wednesday";
+dayOfWeek[3] = "Thursday";
+dayOfWeek[4] = "Friday";
+dayOfWeek[5] = "Saturday";
+dayOfWeek[6] = "Sunday";
+Console.WriteLine(dayOfWeek[2]);
 
-if (plec == 'K' && age < 30)
-{
-    Console.WriteLine("Kobieta poniżej 30 lat");
-}
-else
-{
-    Console.WriteLine("Nie jesteś kobietą poniżej 30 lat");
-}
+string[] dayOfWeek1 = {"poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota", "niedziela"};
+Console.WriteLine(dayOfWeek1[3]);
 
-if (name == "Ewa" && age == 33)
-{
-    Console.WriteLine("Ewa, lat 33");
-}
-else
-{
-    Console.WriteLine("Nie jesteś 33 letnią Ewą");
-}
+List<string> dayOfWeek2 = new List<string>();
+dayOfWeek2.Add("poniedziałek");
+dayOfWeek2.Add("wtorek");
+dayOfWeek2.Add("środa");
+dayOfWeek2.Add("czwarek");
+dayOfWeek2.Add("piątek");
+dayOfWeek2.Add("sobota");
+dayOfWeek2.Add("niedziela");
 
-if (plec == 'M' && age < 18)
+for (var i = 0; i < 7; i = i + 2)
 {
-    Console.WriteLine("Niepełnoletni mężczyzna");
-}
-else
-{
-    Console.WriteLine("Nie jesteś niepełnoletnim mężczyzną");
+    Console.WriteLine(dayOfWeek2[i]);
 }
 
-Console.WriteLine("Poniżej drugie rozwiązanie, bo nie byłam pewna czego oczekujesz:");
 
-if (plec == 'K' && age < 30)
+for (int i = 0; i < dayOfWeek.Length; i++)
 {
-    Console.WriteLine("Kobieta poniżej 30 lat");
-}
-else
-{
-    if (name == "Ewa" && age == 33)
-    {
-        Console.WriteLine("Ewa, lat 33");
-    }
-    else
-    {
-        if (plec == 'M' && age < 18)
-        {
-            Console.WriteLine("Niepełnoletni mężczyzna");
-        }
-        else
-        {
-            Console.WriteLine("Nie jesteś ani niepełnoletnim mężczyzną");
-            Console.WriteLine("ani 33-letnią Ewą ani kobietą poniżej 30");
-        }
+    Console.WriteLine(i);
+    Console.WriteLine(dayOfWeek[i]);
+    Console.WriteLine(dayOfWeek1[i]);
 
-    }
 }
 
+Console.WriteLine("poniżej foreach");
+
+foreach (var day in dayOfWeek2)
+{
+    Console.WriteLine(day);
+
+}
