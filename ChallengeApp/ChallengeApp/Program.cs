@@ -8,4 +8,4 @@ daysOfWeek.Add("sobota");
 daysOfWeek.Add("niedziela");
 
 int numberOfDayOfWeek = 3;
-Console.WriteLine(daysOfWeek[numberOfDayOfWeek - 1]);
+Console.WriteLine(numberOfDayOfWeek + " " + daysOfWeek[numberOfDayOfWeek - 1]);
