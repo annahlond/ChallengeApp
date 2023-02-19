@@ -1,45 +1,55 @@
-﻿// lista, tablica, for, foreach
-int[] grades = new int[365];
-string[] dayOfWeek = new string[7];
-dayOfWeek[0] = "Monday";
-dayOfWeek[1] = "Tuesday";
-dayOfWeek[2] = "Wednesday";
-dayOfWeek[3] = "Thursday";
-dayOfWeek[4] = "Friday";
-dayOfWeek[5] = "Saturday";
-dayOfWeek[6] = "Sunday";
-Console.WriteLine(dayOfWeek[2]);
+﻿int number = 43556160;
+string numberInString = number.ToString();
+char[] letters = numberInString.ToCharArray();
+int[] countOfCyfra = new int[10];
 
-string[] dayOfWeek1 = {"poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota", "niedziela"};
-Console.WriteLine(dayOfWeek1[3]);
-
-List<string> dayOfWeek2 = new List<string>();
-dayOfWeek2.Add("poniedziałek");
-dayOfWeek2.Add("wtorek");
-dayOfWeek2.Add("środa");
-dayOfWeek2.Add("czwarek");
-dayOfWeek2.Add("piątek");
-dayOfWeek2.Add("sobota");
-dayOfWeek2.Add("niedziela");
-
-for (var i = 0; i < 7; i = i + 2)
+for (int i = 0; i < letters.Length; i++)
 {
-    Console.WriteLine(dayOfWeek2[i]);
+    if (letters[i] == '0')
+    {
+        countOfCyfra[0]++;
+    }
+    if (letters[i] == '1')
+    {
+        countOfCyfra[1]++;
+    }
+    if (letters[i] == '2')
+    {
+        countOfCyfra[2]++;
+    }
+    if (letters[i] == '3')
+    {
+        countOfCyfra[3]++;
+    }
+    if (letters[i] == '4')
+    {
+        countOfCyfra[4]++;
+    }
+    if (letters[i] == '5')
+    {
+        countOfCyfra[5]++;
+    }
+    if (letters[i] == '6')
+    {
+        countOfCyfra[6]++;
+    }
+    if (letters[i] == '7')
+    {
+        countOfCyfra[7]++;
+    }
+    if (letters[i] == '8')
+    {
+        countOfCyfra[8]++;
+    }
+    if (letters[i] == '9')
+    {
+        countOfCyfra[9]++;
+    }
+    
 }
 
-
-for (int i = 0; i < dayOfWeek.Length; i++)
+for (int cyfra = 0; cyfra < 10; cyfra++)
 {
-    Console.WriteLine(i);
-    Console.WriteLine(dayOfWeek[i]);
-    Console.WriteLine(dayOfWeek1[i]);
-
+    Console.WriteLine(cyfra + "=>" + countOfCyfra[cyfra]);
 }
 
-Console.WriteLine("poniżej foreach");
-
-foreach (var day in dayOfWeek2)
-{
-    Console.WriteLine(day);
-
-}
