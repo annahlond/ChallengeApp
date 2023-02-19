@@ -1,55 +1,14 @@
-﻿int number = 43556160;
-string numberInString = number.ToString();
-char[] letters = numberInString.ToCharArray();
-int[] countOfCyfra = new int[10];
+﻿int number = 1340024;
+string numberAsString = number.ToString();
+int backwardNumber = 0;
+Console.WriteLine(number);
 
-for (int i = 0; i < letters.Length; i++)
+for (int i = 0; i < numberAsString.Length; i++)
 {
-    if (letters[i] == '0')
-    {
-        countOfCyfra[0]++;
-    }
-    if (letters[i] == '1')
-    {
-        countOfCyfra[1]++;
-    }
-    if (letters[i] == '2')
-    {
-        countOfCyfra[2]++;
-    }
-    if (letters[i] == '3')
-    {
-        countOfCyfra[3]++;
-    }
-    if (letters[i] == '4')
-    {
-        countOfCyfra[4]++;
-    }
-    if (letters[i] == '5')
-    {
-        countOfCyfra[5]++;
-    }
-    if (letters[i] == '6')
-    {
-        countOfCyfra[6]++;
-    }
-    if (letters[i] == '7')
-    {
-        countOfCyfra[7]++;
-    }
-    if (letters[i] == '8')
-    {
-        countOfCyfra[8]++;
-    }
-    if (letters[i] == '9')
-    {
-        countOfCyfra[9]++;
-    }
-    
-}
+    int digit = number % 10;
+    number = number / 10;
+    backwardNumber = backwardNumber * 10 + digit;
 
-for (int cyfra = 0; cyfra < 10; cyfra++)
-{
-    Console.WriteLine(cyfra + "=>" + countOfCyfra[cyfra]);
 }
+Console.WriteLine(backwardNumber);
 
