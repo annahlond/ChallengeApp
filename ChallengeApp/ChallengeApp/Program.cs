@@ -1,10 +1,18 @@
 ﻿using static System.Runtime.InteropServices.JavaScript.JSType;
 
-int numberOfDays = 7856;
-Console.WriteLine("liczba dni = " + numberOfDays);
-int numberOfYears = numberOfDays / 365;
-Console.WriteLine("liczba lat = " + numberOfYears);
-int numberOfWeeks = (numberOfDays - numberOfYears * 365) / 7;
-Console.WriteLine("liczba tygodni = " + numberOfWeeks);
-int remainedNumberOfDays = numberOfDays - numberOfYears * 365 - numberOfWeeks * 7;
-Console.WriteLine("pozostała liczba dni = " + remainedNumberOfDays);
+char znak = '/';
+int wartość = (int)znak;
+Console.WriteLine(wartość + " " + znak);
+if ((64 < wartość && wartość < 91) || (96 < wartość && wartość < 123))
+{
+    Console.WriteLine("znak jest literą");
+}
+else if (48 <= wartość && wartość <= 57)
+{
+    Console.WriteLine("znak jest liczbą");
+}
+else
+{
+    Console.WriteLine("znak specjalny");
+}
+
