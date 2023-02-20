@@ -1,18 +1,15 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
-
-char znak = '/';
-int wartość = (int)znak;
-Console.WriteLine(wartość + " " + znak);
-if ((64 < wartość && wartość < 91) || (96 < wartość && wartość < 123))
+﻿float number = -35.47f;
+Console.WriteLine(number);
+if (number < 0)
 {
-    Console.WriteLine("znak jest literą");
+    Console.WriteLine("dana liczba jest ujemna");
 }
-else if (48 <= wartość && wartość <= 57)
+else if (number > 0)
 {
-    Console.WriteLine("znak jest liczbą");
+    Console.WriteLine("dana liczba jest dodatnia");
 }
 else
 {
-    Console.WriteLine("znak specjalny");
+    Console.WriteLine("dana liczba to 0");
 }
 
