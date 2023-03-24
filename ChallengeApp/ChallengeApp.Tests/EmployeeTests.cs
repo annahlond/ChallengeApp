@@ -4,7 +4,7 @@ namespace ChallengeApp.Tests
     {
        
         [Test]
-        public void SumOfScores_ShouldGetCorrectResult()
+        public void SumOfScoresShouldGetCorrectResult()
         {
             //arrange
             var employee = new Employee("Adam", "Niedzielski", 23);
