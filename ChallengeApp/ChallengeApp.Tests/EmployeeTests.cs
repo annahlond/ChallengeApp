@@ -1,10 +1,10 @@
 namespace ChallengeApp.Tests
 {
-    public class Tests
+    public class EmployeeTests
     {
        
         [Test]
-        public void Test1()
+        public void SumOfScores_ShouldGetCorrectResult()
         {
             //arrange
             var employee = new Employee("Adam", "Niedzielski", 23);
